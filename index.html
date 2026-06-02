@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PT. Empat Sinergi Utama</title>
     
+    <!-- FIXED: Favicon (Logo di Tab Browser) -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
     <meta name="description" content="PT. Empat Sinergi Utama - Penyedia Layanan Solusi Human Resources dan Building Maintenance Terbaik dan Terpercaya.">
     <meta property="og:title" content="PT. Empat Sinergi Utama"/>
     <meta property="og:image" content="2.png" />
@@ -44,16 +47,6 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-        }
-
-        /* Angular Geometri Elements based on Compro Documents */
-        .geo-top-maroon {
-            clip-path: polygon(35% 0, 100% 0, 100% 65%, 70% 65%);
-            background-color: #580c12;
-        }
-        .geo-bottom-gold {
-            clip-path: polygon(0 25%, 50% 100%, 0 100%);
-            background-color: #ba8b25;
         }
 
         /* Fixed Navigation styling on Scroll */
@@ -110,6 +103,54 @@
         .icon-spin {
             transform: rotate(90deg);
         }
+
+        /* Responsive Geometri Base Layout */
+        .geo-top-maroon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #580c12;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .geo-bottom-gold {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #ba8b25;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Tampilan Geometri di HP (Responsive Fix) */
+        @media (max-width: 1023px) {
+            .geo-top-maroon {
+                width: 130px;
+                height: 130px;
+                clip-path: polygon(100% 0, 0 0, 100% 100%);
+                opacity: 0.85;
+            }
+            .geo-bottom-gold {
+                width: 130px;
+                height: 130px;
+                clip-path: polygon(0 0, 0% 100%, 100% 100%);
+                opacity: 0.6;
+            }
+        }
+
+        /* Tampilan Geometri di Desktop */
+        @media (min-width: 1024px) {
+            .geo-top-maroon {
+                width: 66.666667%;
+                height: 520px;
+                clip-path: polygon(35% 0, 100% 0, 100% 65%, 70% 65%);
+            }
+            .geo-bottom-gold {
+                width: 41.666667%;
+                height: 480px;
+                clip-path: polygon(0 25%, 50% 100%, 0 100%);
+            }
+        }
     </style>
 </head>
 <body class="city-overlay-bg overflow-x-hidden">
@@ -151,8 +192,9 @@
     </header>
 
     <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
-        <div class="absolute top-0 right-0 w-8/12 h-[520px] geo-top-maroon z-0 pointer-events-none hidden lg:block"></div>
-        <div class="absolute bottom-0 left-0 w-5/12 h-[480px] geo-bottom-gold z-0 pointer-events-none hidden lg:block"></div>
+        <!-- Geometri Elements -->
+        <div class="geo-top-maroon"></div>
+        <div class="geo-bottom-gold"></div>
 
         <div class="container mx-auto px-6 lg:px-16 text-center lg:text-left relative z-10" data-aos="fade-up" data-aos-duration="1200">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#580c12]/5 border border-[#ba8b25]/40 mb-6 shadow-xs">

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PT. Empat Sinergi Utama</title>
+    
+    <meta name="description" content="PT. Empat Sinergi Utama - Penyedia Layanan Solusi Human Resources dan Building Maintenance Terbaik dan Terpercaya.">
+    <meta property="og:title" content="PT. Empat Sinergi Utama"/>
+    <meta property="og:image" content="2.png" />
+    <meta name="robots" content="index, follow">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdfcfb; /* Premium Clean Cream Background */
+            color: #2b2325;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Corporate Color Tokens */
+        .color-maroon { color: #580c12; }
+        .bg-maroon { background-color: #580c12; }
+        .color-gold { color: #ba8b25; }
+        .bg-gold { background-color: #ba8b25; }
+        
+        /* City Silhouette Overlay Background */
+        .city-overlay-bg {
+            background: 
+                linear-gradient(to bottom, rgba(253, 252, 251, 0.94) 0%, rgba(253, 252, 251, 0.85) 50%, rgba(253, 252, 251, 0.96) 100%),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Angular Geometri Elements based on Compro Documents */
+        .geo-top-maroon {
+            clip-path: polygon(35% 0, 100% 0, 100% 65%, 70% 65%);
+            background-color: #580c12;
+        }
+        .geo-bottom-gold {
+            clip-path: polygon(0 25%, 50% 100%, 0 100%);
+            background-color: #ba8b25;
+        }
+
+        /* Fixed Navigation styling on Scroll */
+        .header-scrolled {
+            background: rgba(253, 252, 251, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(88, 12, 18, 0.05);
+            border-bottom: 1px solid rgba(186, 139, 37, 0.15);
+        }
+        
+        /* Premium Icon Button Interactions */
+        .premium-icon-btn {
+            background: #ffffff;
+            border: 2px solid #ba8b25;
+            box-shadow: 0 8px 20px rgba(186, 139, 37, 0.12);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .premium-icon-btn:hover {
+            background: #580c12;
+            border-color: #ba8b25;
+            color: #ffffff !important;
+            box-shadow: 0 12px 24px rgba(88, 12, 18, 0.2);
+            transform: translateY(-6px);
+        }
+
+        /* Custom Ultra Premium Slogan Gradient */
+        .premium-text-maroon {
+            background: linear-gradient(to right, #580c12, #8d1923);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(88, 12, 18, 0.15));
+        }
+
+        /* PREMIUM ULTRA SMOOTH MOBILE MENU SYSTEM */
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, transform 0.4s ease;
+            transform: translateY(-10px);
+            opacity: 0;
+            pointer-events: none;
+        }
+        #mobileMenu.open {
+            max-height: 400px; /* Sesuai estimasi panjang menu */
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        /* Hamburger Icon Dynamic Spin */
+        #menuIcon {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .icon-spin {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="city-overlay-bg overflow-x-hidden">
+
+    <header id="mainHeader" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-5">
+        <div class="container mx-auto px-6 lg:px-16 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <div class="bg-white p-1.5 rounded-xl shadow-md border border-gray-100">
+                    <img src="2.png" alt="PT. Empat Sinergi Utama Logo" class="h-10 object-contain">
+                </div>
+                <div class="hidden sm:block">
+                    <span class="block text-xs font-bold tracking-widest text-[#580c12]">PT. EMPAT SINERGI UTAMA</span>
+                    <span class="block text-[9px] uppercase text-gray-500 font-bold tracking-widest">Manpower Services</span>
+                </div>
+            </a>
+            
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#" class="text-xs font-bold uppercase tracking-wider text-gray-700 hover:text-[#580c12] transition-colors">Home</a>
+                <a href="#about" class="text-xs font-bold uppercase tracking-wider text-gray-700 hover:text-[#580c12] transition-colors">Who We Are</a>
+                <a href="#services" class="text-xs font-bold uppercase tracking-wider text-gray-700 hover:text-[#580c12] transition-colors">Services</a>
+                <a href="#portfolio" class="text-xs font-bold uppercase tracking-wider text-gray-700 hover:text-[#580c12] transition-colors">Portfolio</a>
+                <a href="mailto:manpower.services@empatsinergiutama.co.id" class="px-5 py-2.5 bg-[#580c12] text-white rounded-lg text-xs font-bold tracking-widest uppercase hover:bg-[#3d070b] transition-all duration-300 shadow-md">Contact Us</a>
+            </nav>
+
+            <button onclick="toggleMobileMenu()" class="lg:hidden text-[#580c12] text-2xl focus:outline-none cursor-pointer p-1">
+                <i id="menuIcon" class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="container mx-auto px-6 lg:hidden">
+            <div class="mt-2 bg-white/95 border border-gray-200/60 shadow-2xl rounded-2xl p-6 flex flex-col gap-4 text-center backdrop-blur-md">
+                <a onclick="toggleMobileMenu()" href="#" class="text-sm font-bold text-gray-800 py-2.5 border-b border-gray-50 hover:text-[#580c12] transition-colors">Home</a>
+                <a onclick="toggleMobileMenu()" href="#about" class="text-sm font-bold text-gray-800 py-2.5 border-b border-gray-50 hover:text-[#580c12] transition-colors">Who We Are</a>
+                <a onclick="toggleMobileMenu()" href="#services" class="text-sm font-bold text-gray-800 py-2.5 border-b border-gray-50 hover:text-[#580c12] transition-colors">Services</a>
+                <a onclick="toggleMobileMenu()" href="#portfolio" class="text-sm font-bold text-gray-800 py-2.5 border-b border-gray-50 hover:text-[#580c12] transition-colors">Portfolio</a>
+                <a onclick="toggleMobileMenu()" href="mailto:manpower.services@empatsinergiutama.co.id" class="w-full py-3 bg-[#580c12] text-white rounded-xl text-xs font-bold block uppercase tracking-wider shadow-md hover:bg-[#3d070b] transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+        <div class="absolute top-0 right-0 w-8/12 h-[520px] geo-top-maroon z-0 pointer-events-none hidden lg:block"></div>
+        <div class="absolute bottom-0 left-0 w-5/12 h-[480px] geo-bottom-gold z-0 pointer-events-none hidden lg:block"></div>
+
+        <div class="container mx-auto px-6 lg:px-16 text-center lg:text-left relative z-10" data-aos="fade-up" data-aos-duration="1200">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#580c12]/5 border border-[#ba8b25]/40 mb-6 shadow-xs">
+                <span class="w-2 h-2 rounded-full bg-[#ba8b25] animate-pulse"></span>
+                <span class="text-[10px] font-bold tracking-widest text-[#ba8b25] uppercase">PT. Empat Sinergi Utama</span>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-gray-900 mb-6 leading-none uppercase">
+                WE ARE YOUR <br class="hidden lg:block">
+                <span class="premium-text-maroon">SOLUTION</span>
+            </h1>
+            
+            <p class="text-gray-600 text-sm md:text-base max-w-xl mb-10 font-medium leading-relaxed">
+                Penyedia Solusi Terintegrasi Kebutuhan Operasional Bisnis, Manajemen Fasilitas Gedung, dan Pemenuhan Ketenagakerjaan Ahli.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <a href="#services" class="w-full sm:w-auto text-center px-8 py-4 bg-[#580c12] hover:bg-[#3d070b] text-white font-bold rounded-lg shadow-xl tracking-wide text-xs uppercase transition-all duration-300">
+                    Explore Our Services
+                </a>
+                <a href="#about" class="w-full sm:w-auto text-center px-8 py-4 bg-white hover:bg-gray-50 text-gray-800 font-semibold rounded-lg border border-gray-200 shadow-xs transition-all duration-300 text-xs uppercase tracking-wide">
+                    Who We Are
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white border-y border-gray-200/40 relative z-10">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7" data-aos="fade-right">
+                    <p class="color-gold font-bold tracking-wider text-xs uppercase mb-3">About Us</p>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-950 mb-6 leading-tight">Mitra Strategis Ketenagakerjaan Anda</h2>
+                    <p class="text-gray-600 mb-4 text-justify text-sm leading-relaxed">
+                        PT. Empat Sinergi Utama adalah perusahaan penyedia tenaga kerja alih daya yang berkomitmen memberikan solusi terbaik untuk kebutuhan operasional bisnis Anda. Dengan tim profesional lebih dari 15 tahun berpengalaman di bidangnya, kami mampu menyediakan layanan berupa sumber daya manusia yang berkualitas dan berdedikasi tinggi.
+                    </p>
+                    <p class="text-gray-600 text-sm text-justify leading-relaxed">
+                        Sumber daya manusia yang kami miliki adalah tenaga kerja yang sudah dibekali pelatihan di bidangnya masing-masing, siap bekerja dan mampu menyesuaikan dengan kebutuhan serta standar operasional perusahaan klien.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-5 bg-[#fdfcfb] p-6 md:p-8 rounded-2xl border-l-4 border-[#580c12] shadow-sm" data-aos="fade-left">
+                    <span class="text-[10px] font-bold text-[#ba8b25] tracking-widest uppercase block mb-1">Corporate Leadership</span>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Rekam Jejak Teruji</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed text-justify">
+                        Dengan pengalaman CEO selama lebih dari 15 tahun bekerja di industri Penyedia Jasa Tenaga Kerja Non Grade dan telah mendukung lebih dari 50 perusahaan multinasional dalam mengelola tenaga kerja, memastikan target bisnis tercapai tepat waktu dan sesuai anggaran.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-[#580c12] font-bold italic">
+                        <span>"Integritas, Profesionalisme, Kualitas"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 relative z-10">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="color-gold font-bold tracking-wider text-xs uppercase mb-2">Our Capabilities</p>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4">LAYANAN ALIH DAYA KAMI</h2>
+                <div class="h-[2px] w-16 bg-[#580c12] mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 px-2">
+                
+                <div class="flex flex-col items-center text-center gap-3" data-aos="fade-up" data-aos-delay="50">
+                    <div class="w-16 h-16 rounded-full premium-icon-btn flex items-center justify-center text-[#580c12] text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <span class="text-[10px] md:text-[11px] font-bold tracking-wider text-gray-800 uppercase px-1">Jasa Keamanan</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center gap-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full premium-icon-btn flex items-center justify-center text-[#580c12] text-xl">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <span class="text-[10px] md:text-[11px] font-bold tracking-wider text-gray-800 uppercase px-1">Jasa Kebersihan</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center gap-3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="w-16 h-16 rounded-full premium-icon-btn flex items-center justify-center text-[#580c12] text-xl">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <span class="text-[10px] md:text-[11px] font-bold tracking-wider text-gray-800 uppercase px-1">Tenaga Pendukung</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full premium-icon-btn flex items-center justify-center text-[#580c12] text-xl">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <span class="text-[10px] md:text-[11px] font-bold tracking-wider text-gray-800 uppercase px-1">Perawatan Taman</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center gap-3" data-aos="fade-up" data-aos-delay="250">
+                    <div class="w-16 h-16 rounded-full premium-icon-btn flex items-center justify-center text-[#580c12] text-xl">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <span class="text-[10px] md:text-[11px] font-bold tracking-wider text-gray-800 uppercase px-1">Jasa Pengemudi</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center gap-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full premium-icon-btn flex items-center justify-center text-[#580c12] text-xl">
+                        <i class="fa-solid fa-square-parking"></i>
+                    </div>
+                    <span class="text-[10px] md:text-[11px] font-bold tracking-wider text-gray-800 uppercase px-1">Jasa Parkir</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center gap-3 col-span-2 sm:col-span-1 mx-auto sm:mx-0" data-aos="fade-up" data-aos-delay="350">
+                    <div class="w-16 h-16 rounded-full premium-icon-btn flex items-center justify-center text-[#580c12] text-xl">
+                        <i class="fa-solid fa-calendar-day"></i>
+                    </div>
+                    <span class="text-[10px] md:text-[11px] font-bold tracking-wider text-gray-800 uppercase px-1">Daily Worker</span>
+                </div>
+
+            </div>
+
+            <div class="mt-12 bg-white p-4 rounded-xl shadow-xs border border-gray-100 max-w-2xl mx-auto text-center text-xs text-gray-500 font-medium">
+                * Seluruh penempatan diikat kontrak sah melalui Perjanjian Kerja Waktu Tertentu (PKWT) dengan jaminan sistem skalabilitas personel yang adaptif.
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-white border-t border-gray-200/40 relative z-10">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <p class="color-gold font-bold tracking-wider text-xs uppercase mb-2">Proven Track Record</p>
+                <h2 class="text-2xl md:text-4xl font-extrabold text-gray-900">PROJECT PORTFOLIO</h2>
+                <div class="h-[2px] w-16 bg-[#580c12] mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-center">
+                <div class="p-6 bg-[#fdfcfb] rounded-xl shadow-xs border border-gray-100 flex items-center justify-center h-28" data-aos="zoom-in" data-aos-delay="50">
+                    <span class="text-xs font-bold text-gray-700 tracking-wider">KEMENPORA RI</span>
+                </div>
+                <div class="p-6 bg-[#fdfcfb] rounded-xl shadow-xs border border-gray-100 flex items-center justify-center h-28" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="text-xs font-bold text-gray-700 tracking-wider">KOTA TANGERANG SELATAN</span>
+                </div>
+                <div class="p-6 bg-[#fdfcfb] rounded-xl shadow-xs border border-gray-100 flex items-center justify-center h-28" data-aos="zoom-in" data-aos-delay="150">
+                    <span class="text-xs font-bold text-gray-700 tracking-wider">BAPPELITBANGDA TANGSEL</span>
+                </div>
+                <div class="p-6 bg-[#fdfcfb] rounded-xl shadow-xs border border-gray-100 flex items-center justify-center h-28" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="text-xs font-bold text-gray-700 tracking-wider">BKAD TANGSEL</span>
+                </div>
+            </div>
+            
+            <p class="text-[11px] text-gray-400 text-center italic mt-8 leading-relaxed max-w-xl mx-auto">
+                Serta dipercaya mendukung pengerjaan proyek harian (Daily Worker) entitas swasta strategis nasional.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-[#580c12] text-white pt-16 pb-12 rounded-t-[32px] relative z-10 shadow-2xl">
+        <div class="container mx-auto px-6 lg:px-16 grid md:grid-cols-12 gap-8 mb-12">
+            
+            <div class="md:col-span-5">
+                <div class="bg-white inline-block p-2 rounded-xl mb-4 shadow-md">
+                    <img src="2.png" alt="Logo Footer" class="h-10 object-contain">
+                </div>
+                <h4 class="text-base font-bold text-white mb-2 tracking-wide">PT. EMPAT SINERGI UTAMA</h4>
+                <p class="text-xs text-white/70 max-w-xs leading-relaxed mb-4">Penyedia Layanan Jasa Tenaga Kerja Alih Daya yang terpercaya, unggul, dan akuntabel di Indonesia.</p>
+                <p class="text-[11px] text-white/40 font-medium">&copy; 2026 PT. Empat Sinergi Utama. All Rights Reserved.</p>
+            </div>
+
+            <div class="md:col-span-7 grid sm:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="text-[#ba8b25] font-bold text-xs tracking-wider uppercase mb-4">Corporate Links</h4>
+                    <ul class="space-y-2 text-xs text-white/80 font-medium">
+                        <li><a href="#" class="hover:text-[#ba8b25] transition-colors">Home Base</a></li>
+                        <li><a href="#about" class="hover:text-[#ba8b25] transition-colors">Who We Are</a></li>
+                        <li><a href="#services" class="hover:text-[#ba8b25] transition-colors">Core Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-[#ba8b25] transition-colors">Project Portfolio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-[#ba8b25] font-bold text-xs tracking-wider uppercase mb-4">Contact Information</h4>
+                    <ul class="space-y-3 text-xs text-white/90">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot mt-0.5 text-[#ba8b25]"></i>
+                            <span>Casa De Boelac No.3, Tangerang Selatan</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-[#ba8b25]"></i>
+                            <span>+62 815 8482 5 000</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-[#ba8b25]"></i>
+                            <a href="mailto:manpower.services@empatsinergiutama.co.id" class="hover:underline">manpower.services@empatsinergiutama.co.id</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-instagram text-[#ba8b25]"></i>
+                            <span>@pt_4sinergiutama</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init AOS Animation
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+        // Sticky Navigation Header Script
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 40) {
+                header.classList.add('header-scrolled', 'py-3');
+                header.classList.remove('py-5');
+            } else {
+                header.classList.remove('header-scrolled', 'py-3');
+                header.classList.add('py-5');
+            }
+        });
+
+        // UPGRADED MOBILE MENU SYSTEM (Smooth slide-down + rotating hamburger icon)
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            
+            if (!menu.classList.contains('open')) {
+                menu.classList.add('open');
+                icon.classList.add('icon-spin', 'fa-xmark');
+                icon.classList.remove('fa-bars-staggered');
+            } else {
+                menu.classList.remove('open');
+                icon.classList.remove('icon-spin', 'fa-xmark');
+                icon.classList.add('fa-bars-staggered');
+            }
+        }
+    </script>
+</body>
+</html>

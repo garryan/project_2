@@ -60,9 +60,9 @@ content="PT. Empat Sinergi Utama adalah perusahaan penyedia tenaga kerja alih da
 <i class="fa-solid fa-bars-staggered"></i>
 </button>
 
-<a href="#contact" class="btn-primary hide-on-mobile">
+<button onclick="openContactModal()" class="btn-primary hide-on-mobile" style="border: none; cursor: pointer;">
 Hubungi Kami
-</a>
+</button>
 
 </div>
 
@@ -98,9 +98,9 @@ dalam mendukung operasional perusahaan.
 
 <div class="hero-buttons">
 
-<a href="#contact" class="btn-primary">
+<button onclick="openContactModal()" class="btn-primary" style="border: none; cursor: pointer;">
 Konsultasi Sekarang
-</a>
+</button>
 
 <a href="#" class="btn-outline">
 Company Profile
@@ -191,7 +191,7 @@ mengelola tenaga kerja profesional.
 <p>
 
 Tenaga kerja yang kami sediakan telah
-dibekali pelatihan sesuai bidangnya and
+dibekali pelatihan sesuai bidangnya dan
 siap bekerja mengikuti standar operasional
 perusahaan pengguna jasa.
 
@@ -449,11 +449,9 @@ bersama PT. Empat Sinergi Utama.
 
 </p>
 
-<a href="#contact" class="btn-gold">
-
+<button onclick="openContactModal()" class="btn-gold" style="border: none; cursor: pointer;">
 Hubungi Kami
-
-</a>
+</button>
 
 </div>
 
@@ -525,6 +523,37 @@ All Rights Reserved.
 
 </footer>
 
+
+<div class="contact-modal-overlay" id="contactModal">
+    <div class="contact-modal-card">
+        <button class="modal-close-btn" onclick="closeContactModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <h3>Hubungi Tim Kami</h3>
+        <p>Silakan pilih kanal komunikasi yang paling nyaman untuk perusahaan Anda:</p>
+        
+        <div class="modal-options-grid">
+            <a href="https://wa.me/6281584825000" target="_blank" class="contact-option-link wa-theme">
+                <div class="option-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="option-details">
+                    <h4>WhatsApp Chat</h4>
+                    <span>Respon cepat via pesan instan</span>
+                </div>
+            </a>
+            
+            <a href="mailto:manpower.services@empatsinergiutama.co.id?subject=Tanya%20Penawaran%20Jasa%20Alih%20Daya%20-%20PT.%20Empat%20Sinergi%20Utama" class="contact-option-link email-theme">
+                <div class="option-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="option-details">
+                    <h4>Email Resmi</h4>
+                    <span>Kirim berkas / dokumen penawaran resmi</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
 <script>
     // System Loader
     window.addEventListener('load', function() {
@@ -546,6 +575,25 @@ All Rights Reserved.
                 icon.className = 'fa-solid fa-bars-staggered';
             }
         });
+    }
+
+    // FIXED: JavaScript Handler untuk Buka & Tutup Pilihan Kontak
+    const contactModal = document.getElementById('contactModal');
+    
+    function openContactModal() {
+        if(contactModal) contactModal.classList.add('active');
+    }
+    
+    function closeModalOnOverlay(e) {
+        if(e.target === contactModal) closeContactModal();
+    }
+    
+    if(contactModal) {
+        contactModal.addEventListener('click', closeModalOnOverlay);
+    }
+
+    function closeContactModal() {
+        if(contactModal) contactModal.classList.remove('active');
     }
 </script>
 
